@@ -14,7 +14,7 @@ import { ThemeContext } from '../../context/ThemeContext';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigation = useNavigation();
-  const { darkMode, toggleTheme } = useContext(ThemeContext); // Use theme context
+  const { darkMode, toggleTheme } = useContext(ThemeContext); 
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -31,31 +31,25 @@ const Header = () => {
 
   return (
     <View style={[styles.header, { backgroundColor: darkMode ? '#222' : '#c2c' }]}>
-      {/* Hamburger Menu Icon */}
       <TouchableOpacity onPress={toggleMenu}>
         <Icon name="menu" size={28} color={darkMode ? '#fff' : '#fff'} />
       </TouchableOpacity>
 
-      {/* App Title */}
       <Text style={[styles.heading, { color: darkMode ? '#fff' : '#ccc' }]}>
         Health Flex
       </Text>
 
-      {/* Theme Toggle Icon */}
       <TouchableOpacity onPress={toggleTheme}>
         <Icon name={darkMode ? 'sunny' : 'moon'} size={26} color={darkMode ? '#fff' : '#fff'} />
       </TouchableOpacity>
 
-      {/* Sidebar Drawer */}
       <Modal transparent visible={isMenuOpen} animationType="fade">
         <Pressable style={styles.overlay} onPress={closeMenu}>
           <View style={[styles.sidebar, { backgroundColor: darkMode ? '#333' : '#fff' }]}>
-            {/* Close Icon */}
             <TouchableOpacity onPress={closeMenu} style={styles.closeButton}>
               <Icon name="close" size={28} color={darkMode ? '#fff' : '#000'} />
             </TouchableOpacity>
 
-            {/* Sidebar Content */}
             <TouchableOpacity style={styles.menuItem} onPress={handleLogsHistory}>
               <Text style={[styles.menuText, { color: darkMode ? '#fff' : '#000' }]}>
                 History

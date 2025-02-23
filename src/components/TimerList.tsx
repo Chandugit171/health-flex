@@ -13,7 +13,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 interface TimerListProps {
   timers: Timer[];
-  onUpdateTimers?: (updatedTimers: Timer[]) => void; // Make it optional
+  onUpdateTimers?: (updatedTimers: Timer[]) => void; 
 }
 
 const TimerList: React.FC<TimerListProps> = ({ timers, onUpdateTimers }) => {
@@ -85,7 +85,7 @@ const TimerList: React.FC<TimerListProps> = ({ timers, onUpdateTimers }) => {
   
             if (newTime === 0) {
               const completedTimer = { ...timer, status: 'completed' };
-              saveToHistory(completedTimer); // Save completed timer to history
+              saveToHistory(completedTimer); 
               return completedTimer;
             }
   
@@ -151,7 +151,7 @@ const TimerList: React.FC<TimerListProps> = ({ timers, onUpdateTimers }) => {
       const newLog = {
         id: completedTimer.id,
         timerName: completedTimer.name,
-        category: 'General', // Change if you have categories
+        category: 'General', 
         completedAt: new Date().toISOString(),
       };
   

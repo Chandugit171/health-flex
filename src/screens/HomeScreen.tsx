@@ -19,7 +19,7 @@ import { ThemeContext } from '../context/ThemeContext';
 
 const HomeScreen = () => {
   const navigation =useNavigation()
-    const { darkMode, toggleTheme } = useContext(ThemeContext); // Use theme context
+    const { darkMode, toggleTheme } = useContext(ThemeContext); 
   
   const [timers, setTimers] = useState<Timer[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);

@@ -15,7 +15,7 @@ import { ThemeContext } from '../context/ThemeContext';
 const HistoryScreen = () => {
   const navigation =useNavigation()
   const [logs, setLogs] = useState<TimerLog[]>([]);
-  const { darkMode, toggleTheme } = useContext(ThemeContext); // Use theme context
+  const { darkMode, toggleTheme } = useContext(ThemeContext);
 
   useEffect(() => {
     loadLogs();

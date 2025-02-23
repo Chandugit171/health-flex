@@ -8,14 +8,13 @@ export const ThemeContext = createContext({
 });
 
 export const ThemeProvider = ({ children }) => {
-  const systemTheme = useColorScheme(); // Get system default theme
+  const systemTheme = useColorScheme(); 
   const [darkMode, setDarkMode] = useState(systemTheme === 'dark');
 
   useEffect(() => {
     loadTheme();
   }, []);
 
-  // Load theme from AsyncStorage
   const loadTheme = async () => {
     const theme = await AsyncStorage.getItem('theme');
     if (theme) {
@@ -23,7 +22,6 @@ export const ThemeProvider = ({ children }) => {
     }
   };
 
-  // Toggle Theme & Save Preference
   const toggleTheme = async () => {
     const newTheme = !darkMode ? 'dark' : 'light';
     setDarkMode(!darkMode);
