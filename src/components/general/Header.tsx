@@ -38,7 +38,7 @@ const Header = () => {
 
       {/* App Title */}
       <Text style={[styles.heading, { color: darkMode ? '#fff' : '#ccc' }]}>
-        Health Flexddfdd
+        Health Flex
       </Text>
 
       {/* Theme Toggle Icon */}
