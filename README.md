@@ -16,4 +16,4 @@
 3. To run this project `yarn android`
 
 *** Android Apk Google Drive Link***
-https://drive.google.com/file/d/1Fz78TP727SfNBl_QhA-g7xEkWspbuZn9/view?usp=sharing
+https://drive.google.com/file/d/1xCfIOAjiSeDMYbjWk-7tfIBVzbIBEpwA/view?usp=sharing
